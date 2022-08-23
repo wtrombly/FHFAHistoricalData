@@ -1,5 +1,6 @@
 box::use(rhino,
          echarts4r,
+         htmlwidgets[JS],
          tidyr,
          reactable[reactable],
          readr[read_csv])
@@ -30,6 +31,6 @@ chartOther <- function(houseData) {
   houseData |>
     echarts4r$e_chart(x = Year) |>
     echarts4r$e_line(Other) |>
-    echarts4r$e_x_axis(Year) |>
+    echarts4r$e_x_axis(Year, formatter = JS("App.formatYear")) |>
     echarts4r$e_tooltip()
 }
