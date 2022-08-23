@@ -1,5 +1,6 @@
 box::use(
-  shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput], 
+  shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput, column, fluidRow, fluidPage, mainPanel, tabPanel, radioButtons, observe], 
+  bslib[bs_theme, font_google,bs_theme_update],
  )
 
 box::use(
@@ -15,22 +16,59 @@ box::use(
 # }, args = list(mod = file.path(box::file(), 'mychart.R')))
 
 
+my_theme <- bs_theme(bootswatch = "cerulean",
+                     base_font = font_google("Righteous"))
+
+
 #' @export
 ui <- function(id) {
   ns <- NS(id)
-  bootstrapPage(
-    # tags$h3(
-    #   textOutput(ns("message")))
-    mychartLIA$ui(ns("mychartLIA")),
-    mychartOther$ui(ns("mychartOther"))
+  
+  
+  
+
+  
+  fluidPage(
+    theme = my_theme,
+    # radioButtons("current_theme", "App Theme:", c("Light" = "cerulean", "Dark" = "darkly")),
+    
+      tabPanel(
+        title = "Affordability",
+        mainPanel(
+          fluidRow(
+            column(12,mychartLIA$ui(ns("mychartLIA")), style = 'padding-left:30px; padding-right:0px;'),
+          )
+         
+        )
+        ),
+      tabPanel(
+        title = "Second Tab",
+      )
+      
+    
+    
+   
   )
+  # bootstrapPage(
+  #   # tags$h3(
+  #   #   textOutput(ns("message")))
+  #   
+  # )
 }
 
 #' @export
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
+    # observe({
+    #   # Make sure theme is kept current with desired
+    #   session$setCurrentTheme(
+    #     bs_theme_update(my_theme, bootswatch = input$current_theme)
+    #   )
+    # })
+    
+    
     mychartLIA$server("mychartLIA")
-    mychartOther$server("mychartOther")
+   
     # output$message <- renderText("Hello!")
   })
 }
