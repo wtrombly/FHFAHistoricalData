@@ -3,7 +3,13 @@ box::use(shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput, na
 
 box::use(app / view / mychartLIA,
          app / view / mychartOther,
-         app / view / mychartTractIncome,)
+         app / view / mychartTractIncome,
+         app / view / mychartBorrowerRace,
+         app / view / mychartLoanToValue,
+         app / view / mychartLoanType,
+         app / view / mychartLoanPurpose,
+         app / view / mychartCensusTractMinority,
+         app / view / mychartBorrowerIncomeRatio,)
 
 # box::use(callr)
 #
@@ -34,6 +40,30 @@ ui <- function(id) {
              mainPanel(fluidRow(
                column(12, mychartTractIncome$ui(ns("mychartTractIncome")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
+    tabPanel(title = "Borrower Race",
+             mainPanel(fluidRow(
+               column(12, mychartBorrowerRace$ui(ns("mychartBorrowerRace")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
+    tabPanel(title = "Loan To Value",
+             mainPanel(fluidRow(
+               column(12, mychartLoanToValue$ui(ns("mychartLoanToValue")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
+    tabPanel(title = "Loan Type",
+             mainPanel(fluidRow(
+               column(12, mychartLoanType$ui(ns("mychartLoanType")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
+    tabPanel(title = "Loan Purpose",
+             mainPanel(fluidRow(
+               column(12, mychartLoanPurpose$ui(ns("mychartLoanPurpose")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
+    tabPanel(title = "Census Tract Minority",
+             mainPanel(fluidRow(
+               column(12, mychartCensusTractMinority$ui(ns("mychartCensusTractMinority")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
+    tabPanel(title = "Borrower Income Ratio",
+             mainPanel(fluidRow(
+               column(12, mychartBorrowerIncomeRatio$ui(ns("mychartBorrowerIncomeRatio")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
   )
   # bootstrapPage(
   #   # tags$h3(
@@ -55,6 +85,12 @@ server <- function(id) {
     
     mychartLIA$server("mychartLIA")
     mychartTractIncome$server("mychartTractIncome")
+    mychartBorrowerRace$server("mychartBorrowerRace")
+    mychartLoanToValue$server("mychartLoanToValue")
+    mychartLoanType$server("mychartLoanType")
+    mychartLoanPurpose$server("mychartLoanPurpose")
+    mychartCensusTractMinority$server("mychartCensusTractMinority")
+    mychartBorrowerIncomeRatio$server("mychartBorrowerIncomeRatio")
     
     # output$message <- renderText("Hello!")
   })
