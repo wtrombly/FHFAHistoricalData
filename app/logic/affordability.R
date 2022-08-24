@@ -35,23 +35,3 @@ chartLIA <- function(houseData) {
 }
 
 
-#' @export
-chartOther <- function(houseData) {
-  
-  label <- list(
-    formatter = htmlwidgets::JS(
-      'function(value, index){
-            return value;
-        }'
-    )
-  )
-  houseData |>
-    echarts4r$e_chart(x = Year) |>
-    
-    echarts4r$e_x_axis(Year, axisLabel = label) |>
-    echarts4r$e_tooltip()
-}
-# 
-# export function formatYear(value) {
-#   return `${value}`;
-# }

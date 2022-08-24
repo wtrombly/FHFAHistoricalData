@@ -18,9 +18,9 @@ box::use(
  #' @export
  server <- function(id) {
    moduleServer(id, function(input, output, session) {
-     houseData <- reactive(affordability$fetch_data())
+     affordabilityData <- reactive(affordability$fetch_data())
     output$mychartLIA <-  renderEcharts4r(
-      affordability$chartLIA(houseData())
+      affordability$chartLIA(affordabilityData())
     )
    })
  }
