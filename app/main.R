@@ -1,4 +1,4 @@
-box::use(shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput, navbarPage,tabsetPanel, navbarMenu, column, fluidRow, fluidPage, mainPanel, tabPanel, radioButtons, observe],
+box::use(shiny[bootstrapPage, moduleServer, NS, div, renderText, tags, textOutput, navbarPage,tabsetPanel, navbarMenu, column, fluidRow, fluidPage, mainPanel, tabPanel, radioButtons, observe],
          bslib[bs_theme, font_google, bs_theme_update],)
 
 box::use(app / view / mychartLIA,
@@ -11,16 +11,15 @@ box::use(app / view / mychartLIA,
          app / view / mychartCensusTractMinority,
          app / view / mychartBorrowerIncomeRatio,)
 
-# box::use(callr)
-#
-# callr$r(function (mychart) {
-#   box::set_script_path(mychart)
-#   box::use(./app/view/mychart)
-# }, args = list(mod = file.path(box::file(), 'mychart.R')))
 
 
 my_theme <- bs_theme(bootswatch = "cerulean",
                      base_font = font_google("Righteous"))
+
+
+grid <- function(...) div(class = "grid", ...)
+card <- function(...) div(class = "card", ...)
+
 
 
 #' @export
@@ -34,35 +33,35 @@ ui <- function(id) {
     tabsetPanel(
       tabPanel(title = "Affordability",
              mainPanel(fluidRow(
-               column(12, mychartLIA$ui(ns("mychartLIA")), style = 'padding-left:30px; padding-right:0px;'),
+              card(column(11, mychartLIA$ui(ns("mychartLIA")), style = 'padding-left:0px; padding-right:0px;')),
              ))),
     tabPanel(title = "Tract Income Ratio",
              mainPanel(fluidRow(
-               column(12, mychartTractIncome$ui(ns("mychartTractIncome")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1),column(11, mychartTractIncome$ui(ns("mychartTractIncome")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Borrower Race",
              mainPanel(fluidRow(
-               column(12, mychartBorrowerRace$ui(ns("mychartBorrowerRace")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1), column(11, mychartBorrowerRace$ui(ns("mychartBorrowerRace")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Loan To Value",
              mainPanel(fluidRow(
-               column(12, mychartLoanToValue$ui(ns("mychartLoanToValue")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1), column(11, mychartLoanToValue$ui(ns("mychartLoanToValue")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Loan Type",
              mainPanel(fluidRow(
-               column(12, mychartLoanType$ui(ns("mychartLoanType")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1), column(11, mychartLoanType$ui(ns("mychartLoanType")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Loan Purpose",
              mainPanel(fluidRow(
-               column(12, mychartLoanPurpose$ui(ns("mychartLoanPurpose")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1),column(11, mychartLoanPurpose$ui(ns("mychartLoanPurpose")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Census Tract Minority",
              mainPanel(fluidRow(
-               column(12, mychartCensusTractMinority$ui(ns("mychartCensusTractMinority")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1), column(11, mychartCensusTractMinority$ui(ns("mychartCensusTractMinority")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
     tabPanel(title = "Borrower Income Ratio",
              mainPanel(fluidRow(
-               column(12, mychartBorrowerIncomeRatio$ui(ns("mychartBorrowerIncomeRatio")), style = 'padding-left:30px; padding-right:0px;'),
+               column(1), column(11, mychartBorrowerIncomeRatio$ui(ns("mychartBorrowerIncomeRatio")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
   )
   # bootstrapPage(
