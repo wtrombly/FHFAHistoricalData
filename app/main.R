@@ -2,7 +2,8 @@ box::use(shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput, na
          bslib[bs_theme, font_google, bs_theme_update],)
 
 box::use(app / view / mychartLIA,
-         app / view / mychartOther)
+         app / view / mychartOther,
+         app / view / mychartTractIncome,)
 
 # box::use(callr)
 #
@@ -29,7 +30,10 @@ ui <- function(id) {
              mainPanel(fluidRow(
                column(12, mychartLIA$ui(ns("mychartLIA")), style = 'padding-left:30px; padding-right:0px;'),
              ))),
-    tabPanel(title = "Tract Income Ratio"),
+    tabPanel(title = "Tract Income Ratio",
+             mainPanel(fluidRow(
+               column(12, mychartTractIncome$ui(ns("mychartTractIncome")), style = 'padding-left:30px; padding-right:0px;'),
+             ))),
   )
   # bootstrapPage(
   #   # tags$h3(
@@ -50,6 +54,7 @@ server <- function(id) {
     # })
     
     mychartLIA$server("mychartLIA")
+    mychartTractIncome$server("mychartTractIncome")
     
     # output$message <- renderText("Hello!")
   })
