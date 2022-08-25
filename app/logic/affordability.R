@@ -28,7 +28,7 @@ chartLIA <- function(houseData) {
     echarts4r$e_line(Very_Low_Income_Family_Not_Low_Income_Area, name = "Very Low Income Family") |>
     echarts4r$e_line(Low_Income_Family_Area, name = "Low Income Family Area") |>
     echarts4r$e_line(Very_Low_Income_Family_And_Low_Income_Area, name = "Very Low Income Family and Low Income Area") |>
-    echarts4r$e_line(No_Designation) |>
+    echarts4r$e_line(No_Designation, name = "No Designation") |>
     echarts4r$e_line(Other) |>
     echarts4r$e_x_axis(Year, axisLabel = label) |>
     echarts4r$e_tooltip()
