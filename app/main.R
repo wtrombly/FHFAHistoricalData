@@ -56,6 +56,12 @@ ui <- function(id) {
                      However with this point you can also see that being a low income family in a low income area appears to be 
                      reducing available credit for home owners, which supports current findings regarding low income borrowers.")
                )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
+               )
              ))),
     tabPanel(title = "Tract Income Ratio",
              mainPanel(fluidRow(
@@ -82,6 +88,12 @@ ui <- function(id) {
                      <strong>STAT DESCRIPTION (Fromt FHFA website) </strong> The ratio of the borrower’s (or borrowers’) annual income to the area
                      median family income for the reporting year. This is the ratio used to determine whether borrower’s (or borrowers’) income 
                      qualifies for an income-based housing goal. This is the ratio defined at 12 CFR 1282.15(b)(1) for owner-occupied units.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
                )
              ))),
     tabPanel(title = "Borrower Race",
@@ -113,6 +125,12 @@ ui <- function(id) {
                      mortgages for which no borrower race or ethnicity is identified, originally coded as information not provided by the borrower in
                      a mail or telephone application, not applicable, or not available.")
                )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
+               )
              ))),
     tabPanel(title = "Loan To Value",
              mainPanel(fluidRow(
@@ -136,6 +154,12 @@ ui <- function(id) {
              fluidRow(
                tags$html(HTML("
                      <strong>STAT DESCRIPTION (From FHFA website) </strong> Combined LTV (or CLTV) when a subordinate lien is known to the Enterprise.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
                )
              ))),
     tabPanel(title = "Loan Type",
@@ -163,6 +187,12 @@ ui <- function(id) {
                      <strong>STAT DESCRIPTION (From FHFA website) </strong> The loan types reported by GSE's Fannie Mae and Freddie Mac. 
                      Rural Housing Service loans include other federally guaranteed loans.")
                )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
+               )
              ))),
     tabPanel(title = "Loan Purpose",
              mainPanel(fluidRow(
@@ -187,6 +217,12 @@ ui <- function(id) {
                tags$html(HTML("
                      <strong>STAT DESCRIPTION (From FHFA website) </strong> Purpose of loan reported by the Enterprise. * Purchases include subordinate 
                      liens and home improvement/rehabilitation loans that are associated with a home purchase.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
                )
              ))),
     tabPanel(title = "Census Tract Minority",
@@ -215,6 +251,12 @@ ui <- function(id) {
                      <strong>STAT DESCRIPTION (From FHFA website) </strong> The percentage of the census tract’s population that is classified as 
                      belonging to a minority group, based on the 2010 decennial census.")
                )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
+               )
              ))),
     tabPanel(title = "Borrower Income Ratio",
              mainPanel(fluidRow(
@@ -241,6 +283,12 @@ ui <- function(id) {
                      <strong>STAT DESCRIPTION (From FHFA website) </strong> The ratio of the borrower’s (or borrowers’) annual income to the area median family
                      income for the reporting year. This is the ratio used to determine whether borrower’s (or borrowers’) income qualifies for an income-based housing goal. 
                      This is the ratio defined at 12 CFR 1282.15(b)(1) for owner-occupied units.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx")
                )
              ))),
    
