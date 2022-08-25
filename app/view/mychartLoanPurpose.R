@@ -6,7 +6,7 @@ box::use(
 
 
 box::use(
-  app/logic/LoanPurpose
+  app/logic/loanPurpose
 )
 
 #' @export
@@ -18,9 +18,9 @@ ui <- function(id) {
 #' @export
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    LoanPurposeData <- reactive(LoanPurpose$fetch_data())
+    LoanPurposeData <- reactive(loanPurpose$fetch_data())
     output$mychartLoanPurpose <-  renderEcharts4r(
-      LoanPurpose$chartLoanPurpose(LoanPurposeData())
+      loanPurpose$chartLoanPurpose(LoanPurposeData())
     )
   })
 }

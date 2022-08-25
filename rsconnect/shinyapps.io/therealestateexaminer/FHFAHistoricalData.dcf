@@ -1,0 +1,13 @@
+name: FHFAHistoricalData
+title: FHFAHistoricalData
+username:
+account: therealestateexaminer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6846576
+bundleId: 6236988
+url: https://therealestateexaminer.shinyapps.io/FHFAHistoricalData/
+when: 1661431310.6023
+lastSyncTime: 1661431310.60231
+asMultiple: FALSE
+asStatic: FALSE

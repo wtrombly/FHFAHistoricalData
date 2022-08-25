@@ -152,7 +152,7 @@ ui <- function(id) {
              fluidRow(
                tags$html(HTML("
                      <strong>LOAN TYPE COMMENTARY</strong> The majority of loans processed by Fannie Mae and Freddie Mac are not federally 
-                     guaranteed home loans. The above classifications DO NOT share similar trends, most notably a strong peak and decline of 
+                     guaranteed home loans (Toggle No Federal Guarantee Loans for more detail). The above classifications DO NOT share similar trends, most notably a strong peak and decline of 
                      FHA or VA home loans being processed through 2012 an 2014. Rural Housing Service (RHS) Loans are a significantly smaller statistic
                      in this data set which includes other guaranteed loan types.")
                )
@@ -171,7 +171,22 @@ ui <- function(id) {
              br(),
              fluidRow(
                tags$html(HTML("
-                     <i>Raw HTML!</i>")
+                     CLICK THE LEGEND IN THE GRAPH TO TOGGLE TREND LINES")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>LOAN PURPOSE COMMENTARY</strong> Loans for the purpose of purchases have steadily increased since 2010 through 2020 with an apparent
+                     increase in the rate of growth for this statistic. Refinances have also rapdily increased since 2019 through 2020 and have not followed the trend
+                     of purchases before this time period.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>STAT DESCRIPTION (From FHFA website) </strong> Purpose of loan reported by the Enterprise. * Purchases include subordinate 
+                     liens and home improvement/rehabilitation loans that are associated with a home purchase.")
                )
              ))),
     tabPanel(title = "Census Tract Minority",
@@ -181,7 +196,24 @@ ui <- function(id) {
              br(),
              fluidRow(
                tags$html(HTML("
-                     <i>Raw HTML!</i>")
+                     CLICK THE LEGEND IN THE GRAPH TO TOGGLE TREND LINES")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>CENSUS TRACT MINORITY COMMENTARY</strong> All loans processed by Fannie Mae and Freddie Mac with the exception of Missing Data category can be
+                     categorized as being in a census tract.  These loans all follow similar trends along the term with the exception of loans occurring 
+                     in census tracts with less than 10% of the population occurring between 2010 and 2014. This segment continued to decline during this term as 
+                     opposed to the other two classifications(tracts with minority populations greater than 10%) which appears to have grown and then declined from 2011 through
+                     2014. Loans with census tracts below 10% appears to have occurred less often than the other classifications from 2014-2020.")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>STAT DESCRIPTION (From FHFA website) </strong> The percentage of the census tract’s population that is classified as 
+                     belonging to a minority group, based on the 2010 decennial census.")
                )
              ))),
     tabPanel(title = "Borrower Income Ratio",
@@ -191,7 +223,24 @@ ui <- function(id) {
              br(),
              fluidRow(
                tags$html(HTML("
-                     <i>Raw HTML!</i>")
+                     CLICK THE LEGEND IN THE GRAPH TO TOGGLE TREND LINES")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>BORROWER INCOME RATIO COMMENTARY</strong> The majority of loans processed by Fannie Mae and Freddie Mac have borrowers that have an income ratio greater 
+                     than 80 and is nearly double that of the other loans. The next highest category is borrowers with an income ratio of 50% or less than the census trace
+                     median income. The different categories follow similar trans after 2014, however before 2014 they do not. Borrowers above 80% and below 50% do not appear
+                     to follow the same trends as the other categories with strong declines between 2010 and 2014, and stronger increases after 2019. ")
+               )
+             ),
+             br(),
+             fluidRow(
+               tags$html(HTML("
+                     <strong>STAT DESCRIPTION (From FHFA website) </strong> The ratio of the borrower’s (or borrowers’) annual income to the area median family
+                     income for the reporting year. This is the ratio used to determine whether borrower’s (or borrowers’) income qualifies for an income-based housing goal. 
+                     This is the ratio defined at 12 CFR 1282.15(b)(1) for owner-occupied units.")
                )
              ))),
    

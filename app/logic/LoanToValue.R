@@ -8,7 +8,7 @@ box::use(rhino,
 
 #' @export
 fetch_data <- function() {
-  houseData <- read_csv(file = "sortedData/LTVsorted.csv")
+  houseData <- read_csv(file = "sortedData/LTVSorted.csv")
 }
 
 #' @export
