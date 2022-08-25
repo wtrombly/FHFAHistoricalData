@@ -28,6 +28,10 @@ chartLoanPurpose <- function(houseData) {
     echarts4r$e_line(Purchase, name = "Purchase") |>
     echarts4r$e_line(Refinance_Or_Other, name = "Refinance Or Other") |>
     echarts4r$e_x_axis(Year, axisLabel = label) |>
+    echarts4r$e_grid(
+      left = 100,# pixels
+      top = "15%" # percentage = responsive
+    ) |>
     echarts4r$e_tooltip()
 }
 

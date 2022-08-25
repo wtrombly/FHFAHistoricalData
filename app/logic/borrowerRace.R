@@ -34,6 +34,10 @@ chartBorrowerRace <- function(houseData) {
     echarts4r$e_line(Hispanic_or_Latino, name = "Hispanic Or Latino") |>
     echarts4r$e_line(Not_Available, name = "Not Available") |>
     echarts4r$e_x_axis(Year, axisLabel = label) |>
+    echarts4r$e_grid(
+      left = 100,# pixels
+      top = "15%" # percentage = responsive
+    ) |>
     echarts4r$e_tooltip()
 }
 

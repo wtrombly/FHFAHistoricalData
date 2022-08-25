@@ -30,6 +30,10 @@ chartLoanType <- function(houseData) {
     echarts4r$e_line(HECM, name = "Home Equity Conversion Mortgage") |>
     echarts4r$e_line(No_Federal_Guarantee, name = "No Federal Guarantee") |>
     echarts4r$e_x_axis(Year, axisLabel = label) |>
+    echarts4r$e_grid(
+      left = 100,# pixels
+      top = "15%" # percentage = responsive
+    ) |>
     echarts4r$e_tooltip()
 }
 

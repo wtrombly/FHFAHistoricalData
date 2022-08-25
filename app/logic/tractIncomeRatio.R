@@ -30,6 +30,10 @@ charttractIncome <- function(houseData) {
     echarts4r$e_line(Greater_Than_120_Percent, name = "Greater Than 120%") |>
     echarts4r$e_line(Missing_Data, name = "Missing Data") |>
     echarts4r$e_x_axis(Year, axisLabel = label) |>
+    echarts4r$e_grid(
+      left = 100,# pixels
+      top = "15%" # percentage = responsive
+    ) |>
     echarts4r$e_tooltip()
 }
 
