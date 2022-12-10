@@ -1,8 +1,6 @@
 # FHFAHistoricalData
  Exploring FHFA Data is a microfront end web application using [R Shiny](https://shiny.rstudio.com/) and [Rhino framework](https://appsilon.github.io/rhino/) full stack development system which allows for modularizing, testing, and taking an engineers approach to development.
 
-Feel free to explore the web app hosted on my webpage [here].(https://therealestateexaminer.com/fhfa-data-2010-2020/)
-
 
 ##WebApp Preview
 ![Sequence 01_2](https://user-images.githubusercontent.com/76636215/187077768-67029cfa-bd3a-4087-92de-608eb2a7283b.gif)
@@ -14,7 +12,10 @@ Use github to clone the repository to your local hard drive. Open the RShinyHUD.
 A data pipeline has not been developed for this project as HUD data is not published regularly.
 
 ## How To Use
+Feel free to explore the web app hosted on my webpage [here].(https://therealestateexaminer.com/fhfa-data-2010-2020/)
+
 The web application has 8 tabs with graphs and commentary associated with each. This commentary provides an explanation of the metrics selected as well as some light interpretion the data relative to the intended use of the web application.  The graph plot has been selected to allow the user an interactive interface refining the graph by selectung multple categories for viewing with toggles shown at the top of each graph. This provides a better data visualization experience and allows for maximum information communicated to the user using current technology.
+Please give credit where credit is due.
 
 ## Why
 
