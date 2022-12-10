@@ -15,8 +15,12 @@ A data pipeline has not been developed for this project as HUD data is not publi
 Feel free to explore the web app hosted on my webpage [here].(https://therealestateexaminer.com/fhfa-data-2010-2020/)
 
 The web application has 8 tabs with graphs and commentary associated with each. This commentary provides an explanation of the metrics selected as well as some light interpretion the data relative to the intended use of the web application.  The graph plot has been selected to allow the user an interactive interface refining the graph by selectung multple categories for viewing with toggles shown at the top of each graph. This provides a better data visualization experience and allows for maximum information communicated to the user using current technology.
-Please give credit where credit is due.
+
 
 ## Why
 
 The data provided is from the FHFA.GOV [website](Data Source: https://www.fhfa.gov/DataTools/Downloads/Pages/Single-Family-Mortgage-Level-Owner-Occupied-1-Unit-Property-(National-File-A).aspx). This is an important step in allowing the public to detail and analyze how effective government sponsored enterprises (GSE's) like Fannie Mae and Freddie Mac influence the housing market in the United States. As a certified residential appraiser I play a large role in this process and aim to be up to date and a source of information for those I serve as leadership among my peers as well as the customers I serve.
+
+### Use
+If you choose to use my code, please give credit to William Trombly of [TheRealEstateExaminer.com](https://therealestateexaminer.com/)
+Please give credit where credit is due.
